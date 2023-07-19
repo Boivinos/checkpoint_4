@@ -1,0 +1,29 @@
+.navBar {
+    height: 100px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+
+
+    .logo {
+        height: 95%;
+        overflow: hidden;        
+    }
+}
+
+.footer {
+    height: 50px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    p {
+        color: white;
+        text-align: center;        
+    }
+}

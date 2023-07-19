@@ -1,0 +1,43 @@
+.cardMini {
+    cursor: pointer;
+    border: 4px solid black;
+    border-radius: 8px;
+    width: 218px;
+    height: 304px;
+    position: relative;
+    display: flex;
+    flex-direction: column;  
+    align-items: center;  
+
+    .cardHeader {
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+padding: 2px 5px;
+font-size: 0.9em;
+
+.cardCostBox {
+    height: 16px;
+    width: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+   
+    border-radius: 8px;
+    .cardCost {
+        color: white;
+        font-size: 0.8em;
+        width: 100%;
+        text-align: center;
+    }
+    
+}
+    }
+
+    .cardImage {
+        width: 100%;
+        overflow: hidden;
+    }
+}

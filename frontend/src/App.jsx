@@ -1,11 +1,16 @@
+import NavBar from "./components/navBar/NavBar"
+import Footer from "./components/navBar/Footer"
+import Router from "./navigation/Router"
+import "./imports.scss"
+
 function App() {
 
 
   return (
     <>
-      <p className='text-2xl'>
-        Click on the Vite and React logos to learn more
-      </p>
+    <NavBar/>
+    <Router/>
+    <Footer/>
     </>
   )
 }
