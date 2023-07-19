@@ -1,0 +1,82 @@
+.cardDetails {
+        height: calc(100vh - 210px);
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+
+        .detailsWrapper {
+            margin-top: 10px;
+        display: flex;
+        align-items: center;
+        height: 80%;
+        gap: 30px;
+        justify-content: space-around;
+
+       form {
+display: flex;
+flex-direction: column;
+width: 60%;
+gap: 10px;
+align-items: center;
+
+.numInput {
+    width:50%;    
+    display: flex;
+    justify-content: space-between;   
+    align-self: flex-start;
+}
+.defenseWrapper {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+
+    .formError {
+        max-width: 40%;
+        color: red;
+        font-size: 0.8em;
+        
+    }
+}
+
+.input {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    .formError {
+        color: red;
+        font-size: 0.8em;
+    }
+
+    input, textarea {
+        width:50%;  
+        resize: none;   
+        font-family: $mainTypo;  
+        font-size: 0.8em;    
+  
+    }
+  
+}
+label {
+    width: 100%;
+}
+       }
+       .submitButton {
+        margin-top: 30px;
+        width: 40%;
+        cursor: pointer;
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 20px;
+        padding: 5px 0;
+   
+       }
+       .submitButton:hover {
+        background-color: black;
+        color: white;
+       }
+        }
+
+     
+}
