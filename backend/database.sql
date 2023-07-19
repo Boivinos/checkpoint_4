@@ -54,3 +54,35 @@ VALUES (
         2,
         2
     );
+
+CREATE TABLE
+    magic_user (
+        id INT NOT NULL AUTO_INCREMENT UNIQUE,
+        user_name varchar(200) NOT NULL,
+        email varchar(200) NOT NULL,
+        password varchar(200) NOT NULL,
+        PRIMARY KEY (`id`)
+    );
+
+INSERT INTO
+    magic_user (user_name, email, password)
+VALUES (
+        "Boivinos",
+        "boivinantonin@gmail.com",
+        "0000"
+    );
+
+CREATE TABLE
+    deck (
+        user_id INT NOT NULL,
+        card_id INT NOT NULL,
+        PRIMARY KEY (`user_id`, `card_id`)
+    );
+
+ALTER TABLE `deck`
+ADD
+    CONSTRAINT `deck_fk0` FOREIGN KEY (`user_id`) REFERENCES `magic_user`(`id`);
+
+ALTER TABLE `deck`
+ADD
+    CONSTRAINT `deck_fk1` FOREIGN KEY (`card_id`) REFERENCES `magic_card`(`id`);

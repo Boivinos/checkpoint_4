@@ -29,9 +29,13 @@ pool.getConnection().catch(() => {
 
 const models = {};
 const cardManager = require("./cardManager");
+const userManager = require("./userManager");
 
 models.card = new cardManager();
 models.card.setDatabase(pool);
+
+models.user = new userManager();
+models.user.setDatabase(pool);
 
 const handler = {
   get(obj, prop) {

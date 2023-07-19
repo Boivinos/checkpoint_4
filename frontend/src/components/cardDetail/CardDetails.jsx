@@ -89,8 +89,7 @@ const handleDelete = () => {
        {required: true
        })} />
       {errors.card_name && <span className='formError'>Pas de carte sans nom !</span>}
-      </div>
- 
+      </div> 
       <div className="input">
       <textarea defaultValue={cardData.description}
             id="ContactForm_inputMessage"
