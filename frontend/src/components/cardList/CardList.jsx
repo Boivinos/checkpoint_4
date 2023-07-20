@@ -2,18 +2,18 @@ import React, { useEffect, useState }  from 'react';
 import CardMini from '../cardCard/CardMini';
 import axios from 'axios';
 
-const CardList = () => {
+const CardList = ({query, title}) => {
     const [cardData, setCardData] = useState([])
 
 useEffect(() => {
-    axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/cards`)
+    axios.get(query)
       .then((response) => setCardData(response.data))
       .catch((error) => console.error(error.message));
-  }, []);
+  }, [query]);
 
     return (
         <div className='cardList'> 
-        <h2>Voici votre ersatz de deck :</h2>
+        <h2>{title}</h2>
         <div className='cardsContainer'>
             {cardData.map((card)=> {
                 return (

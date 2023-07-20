@@ -14,6 +14,37 @@ const getAllCards = (req, res) => {
     });
 };
 
+const getAllCardsFromDeck = (req, res) => {
+  models.card
+    .getDeck(req.params.id)
+    .then(([cards]) => {
+      res.send(cards);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send("Error retrieving data from database");
+    });
+};
+
+const getARandomBooster = (req, res) => {
+  models.card
+    .findAll()
+    .then(([cards]) => {
+      const temp = [];
+      while (temp.length < 3) {
+        const rdmCard = cards[Math.floor(Math.random() * cards.length)];
+        if (temp.find((el) => el.id === rdmCard.id) === undefined) {
+          temp.push(rdmCard);
+        }
+      }
+      res.send(temp);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send("Error retrieving data from database");
+    });
+};
+
 const getOneCard = (req, res) => {
   models.card
     .find(req.params.id)
@@ -111,4 +142,6 @@ module.exports = {
   editCard,
   destroy,
   addCard,
+  getAllCardsFromDeck,
+  getARandomBooster,
 };

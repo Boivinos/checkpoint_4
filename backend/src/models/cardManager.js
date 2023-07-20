@@ -42,6 +42,22 @@ class cardManager extends AbstractManager {
       ]
     );
   }
+  getDeck(id) {
+    return this.database.query(
+      `SELECT * from ${this.table} 
+      INNER JOIN deck 
+      ON magic_card.id = deck.card_id
+      WHERE user_id = ?`,
+      [id]
+    );
+  }
+  createBaseDeck(id) {
+    return this.database.query(
+      `insert into deck (user_id,card_id) values (?,1), (?,2),(?,3);
+      `,
+      [id, id, id]
+    );
+  }
 }
 
 module.exports = cardManager;

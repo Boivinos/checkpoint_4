@@ -7,15 +7,19 @@
     justify-content: center;
 
     input {
-        width: 50%;
+        width: 30%;
     }
     
     .formError {
         color:  red;
         text-align: center;
     }
-    .submitButton {
-        width: 30%;
+    .submitButton, .inscription {
+        width: 20%;
     }
 
+}
+.inscriptionSuccess {
+    text-align: center;
+    margin-top: 20px;
 }

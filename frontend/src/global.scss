@@ -11,10 +11,11 @@ li {
 
 a {
   text-decoration: none;
-  color: black;
+  color: inherit;
 }
 
   h1 {
+    font-size: calc(0.3em + 2vw);
     font-family: $mainTypo;
     color: white;
     font-weight: 500;    
@@ -49,9 +50,14 @@ a {
     border-radius: 20px;
     padding: 5px 0;
     align-self: center;
+    visibility: initial;
 }
 button:hover, .submitButton:hover {
     background-color: black;
 color: white;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
